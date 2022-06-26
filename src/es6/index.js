@@ -88,3 +88,59 @@ console.log(globalVar);
 const a = 'b';
 a = 'a';
 console.log(a);
+
+
+//Propiedad de objeto mejorada
+
+let firstname = 'Carlos';
+let number = 32;
+
+//es5
+obj = {firstname: firstname, number: number };
+console.log(obj);
+
+//es6
+object = { firstname, number };
+console.log(object);
+
+//Arrow function 
+
+const names = [
+    { name: 'Carlos', number: 695},
+    { name: 'Rita', number: 622}
+]
+
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+})
+
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const lisOfNames3 = (name, number, country) => {
+    ...
+}
+
+const  listOfNames4 = name => {
+    ...
+}
+
+const square = num => num * num;
+
+
+//Promesas para trabajar el asincronismo
+
+const hellopromise = () => {
+    return new Promise((resolve, reject) => {
+        if (false) {
+            resolve('Hey! todo bien');
+        } else {
+            reject('Ups!!');
+        }
+    });
+}
+
+hellopromise()
+    .then(response => console.log(response))
+    .then(() => console.log('hola!'))
+    .catch(error => console.log(error));
+
