@@ -144,3 +144,41 @@ hellopromise()
     .then(() => console.log('hola!'))
     .catch(error => console.log(error));
 
+//Clases
+class calculator {
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+
+}   
+
+const calc = new calculator();
+console.log(calc.sum(12, 2));
+
+//módulos Import export
+
+import { helloworld } from './module';
+
+helloworld();
+
+//Generators => generadores
+
+function* hellogenerator() {
+    if (true) {
+        yield 'Hello Generator';
+    }
+    if (true) {
+        yield 'Of The World';
+    }
+};
+
+const generetorplus = hellogenerator();
+console.log(generetorplus.next().value);
+console.log(generetorplus.next().value);
+console.log(generetorplus.next().value);
