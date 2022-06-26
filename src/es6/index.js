@@ -117,11 +117,11 @@ let listOfNames = names.map(function(item){
 let listOfNames2 = names.map(item => console.log(item.name));
 
 const lisOfNames3 = (name, number, country) => {
-    ...
+    
 }
 
 const  listOfNames4 = name => {
-    ...
+    
 }
 
 const square = num => num * num;
